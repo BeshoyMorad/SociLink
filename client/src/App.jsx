@@ -4,8 +4,8 @@ import LoginPage from "pages/login";
 import ProfilePage from "pages/profile";
 
 // MUI
-import { ThemeProvider } from "@emotion/react";
-import { CssBaseline, createTheme } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
@@ -15,13 +15,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   const mode = useSelector((state) => state.mode);
 
-  const theme = useMemo(() => {
-    createTheme({
-      palette: {
-        mode: mode,
-      },
-    });
-  }, [mode]);
+  const theme = useMemo(() => createTheme({ palette: { mode } }), [mode]);
 
   return (
     <div className="app">
