@@ -1,17 +1,40 @@
+// Pages
 import HomePage from "pages/home";
 import LoginPage from "pages/login";
 import ProfilePage from "pages/profile";
+
+// MUI
+import { ThemeProvider } from "@emotion/react";
+import { CssBaseline, createTheme } from "@mui/material";
+
+import { useMemo } from "react";
+import { useSelector } from "react-redux";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
+  const mode = useSelector((state) => state.mode);
+
+  const theme = useMemo(() => {
+    createTheme({
+      palette: {
+        mode: mode,
+      },
+    });
+  }, [mode]);
+
   return (
     <div className="app">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/profile/:userId" element={<ProfilePage />} />
-        </Routes>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/profile/:userId" element={<ProfilePage />} />
+          </Routes>
+        </ThemeProvider>
       </BrowserRouter>
     </div>
   );
