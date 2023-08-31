@@ -9,9 +9,15 @@ import helmet from "helmet";
 import path from "path";
 import { fileURLToPath } from "url";
 
+// Routes
 import router from "./routes/routes.js";
 
+// Controllers
 import { register } from "./controllers/auth.js";
+import { createPost } from "./controllers/posts.js";
+
+// Middlewares
+import { verifyToken } from "./middlewares/auth.js";
 
 // Configurations //
 const __filename = fileURLToPath(import.meta.url);
@@ -45,6 +51,7 @@ const upload = multer({ storage });
 
 // Routes With Files //
 app.post("/auth/register", upload.single("picture"), register);
+app.post("/posts", verifyToken, upload.single("picture"), createPost);
 
 // Routes //
 app.use(router);
