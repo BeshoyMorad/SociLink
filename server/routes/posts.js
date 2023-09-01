@@ -4,8 +4,8 @@ import { verifyToken } from "../middlewares/auth.js";
 
 const postRouter = express.Router();
 
-postRouter.get("/", getFeedPosts);
-postRouter.get("/:userId", getUserPosts);
+postRouter.get("/", verifyToken, getFeedPosts);
+postRouter.get("/:userId", verifyToken, getUserPosts);
 
 postRouter.patch("/:postId/like", verifyToken, likePost);
 
