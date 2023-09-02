@@ -11,6 +11,10 @@ const getDesignTokens = (mode) => ({
           searchBar: {
             main: grey[400],
           },
+          loginForm: {
+            headerBG: grey[300],
+            FormBG: grey[200],
+          },
         }
       : {
           navBar: {
@@ -18,6 +22,10 @@ const getDesignTokens = (mode) => ({
           },
           searchBar: {
             main: grey[600],
+          },
+          loginForm: {
+            headerBG: grey[700],
+            FormBG: grey[800],
           },
         }),
   },
