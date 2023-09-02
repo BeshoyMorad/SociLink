@@ -82,7 +82,7 @@ function Navbar() {
 
       {/* Desktop Navbar */}
       {isNonMobileScreens ? (
-        <FlexBetween gap="1.5rem">
+        <FlexBetween gap="1.5rem" ml="0.5rem">
           {/* Dark Mode Button */}
           <IconButton onClick={() => dispatch(setMode())}>
             {theme.palette.mode === "light" ? (
@@ -124,7 +124,12 @@ function Navbar() {
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                  <ListItemButton onClick={() => dispatch(setLogout())}>
+                  <ListItemButton
+                    onClick={() => {
+                      dispatch(setLogout());
+                      navigate("/");
+                    }}
+                  >
                     <ListItemText primary="Logout" />
                   </ListItemButton>
                 </ListItem>
