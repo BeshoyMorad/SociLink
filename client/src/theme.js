@@ -1,4 +1,4 @@
-import { grey } from "@mui/material/colors";
+import { blueGrey, grey } from "@mui/material/colors";
 
 const getDesignTokens = (mode) => ({
   palette: {
@@ -15,6 +15,9 @@ const getDesignTokens = (mode) => ({
             headerBG: grey[300],
             FormBG: grey[200],
           },
+          widgetBG: {
+            main: blueGrey[50],
+          },
         }
       : {
           navBar: {
@@ -26,6 +29,9 @@ const getDesignTokens = (mode) => ({
           loginForm: {
             headerBG: grey[700],
             FormBG: grey[800],
+          },
+          widgetBG: {
+            main: grey[600],
           },
         }),
   },
