@@ -75,7 +75,6 @@ function Form(props) {
     for (let value in values) {
       formData.append(value, values[value]);
     }
-    formData.delete("picture");
     formData.append("picturePath", values.picture.name);
 
     const savedUserResponse = await fetch(
