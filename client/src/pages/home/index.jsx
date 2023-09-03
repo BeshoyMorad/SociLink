@@ -1,5 +1,6 @@
 import { Box, Grid, useMediaQuery } from "@mui/material";
 import Navbar from "pages/navbar";
+import MyPostWidget from "pages/widgets/MyPostWidget";
 import UserWidget from "pages/widgets/UserWidget";
 import { useSelector } from "react-redux";
 
@@ -23,7 +24,7 @@ function HomePage() {
         </Grid>
 
         <Grid item xs={isNonMobileScreens ? 6 : 12}>
-          {/* Friends list */}
+          <MyPostWidget />
         </Grid>
 
         {isNonMobileScreens && (

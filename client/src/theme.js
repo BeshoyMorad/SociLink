@@ -18,6 +18,9 @@ const getDesignTokens = (mode) => ({
           widgetBG: {
             main: blueGrey[50],
           },
+          inputBaseBG: {
+            main: grey[300],
+          },
         }
       : {
           navBar: {
@@ -32,6 +35,9 @@ const getDesignTokens = (mode) => ({
           },
           widgetBG: {
             main: grey[600],
+          },
+          inputBaseBG: {
+            main: grey[500],
           },
         }),
   },

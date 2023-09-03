@@ -30,7 +30,7 @@ const authSlice = createSlice({
       }
     },
     setPosts: (state, action) => {
-      state.posts = action.payload;
+      state.posts.push(action.payload);
     },
     setPost: (state, action) => {
       // Not yet implemented
