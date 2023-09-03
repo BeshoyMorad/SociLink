@@ -65,7 +65,7 @@ function Form(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const theme = useTheme();
-  const isNonMobileScreens = useMediaQuery("(min-width: 800px)");
+  const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
 

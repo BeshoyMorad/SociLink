@@ -31,7 +31,7 @@ import { setLogout, setMode } from "state";
 function Navbar() {
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
-  const isNonMobileScreens = useMediaQuery("(min-width: 800px)");
+  const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
 
   const dispatch = useDispatch();
   const navigate = useNavigate();

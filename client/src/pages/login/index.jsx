@@ -4,7 +4,7 @@ import Form from "./Form";
 
 function LoginPage() {
   const theme = useTheme();
-  const isNonMobileScreens = useMediaQuery("(min-width: 800px)");
+  const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
 
   return (
     <Box>
