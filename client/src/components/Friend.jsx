@@ -23,7 +23,10 @@ function Friend({ friendId, name, friendLocation, friendPicturePath }) {
       `http://localhost:3001/users/${_id}/${friendId}`,
       {
         method: "PATCH",
-        headers: { Authorization: `Bearer ${token}` },
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({ add }),
       }
     );
@@ -54,27 +57,25 @@ function Friend({ friendId, name, friendLocation, friendPicturePath }) {
           >
             {name}
           </Typography>
-          <Typography>{friendLocation}</Typography>
+          <Typography fontSize="0.9rem">{friendLocation}</Typography>
         </Box>
       </FlexBetween>
 
-      <IconButton
-        onClick={addRemoveFriend}
-        sx={{
-          p: "0.6rem",
-          bgcolor: palette.addFriendBtn.backGround,
-          borderRadius: "3rem",
-          "&:hover": {
-            bgcolor: palette.addFriendBtn.backGround,
-          },
-        }}
-      >
-        {isFriend ? (
-          <PersonRemoveIcon sx={{ color: palette.addFriendBtn.main }} />
-        ) : (
-          <PersonAddIcon sx={{ color: palette.addFriendBtn.main }} />
-        )}
-      </IconButton>
+      {_id !== friendId && (
+        <IconButton
+          onClick={addRemoveFriend}
+          sx={{
+            p: "0.6rem",
+            bgcolor: palette.addFriendBtn.main,
+            borderRadius: "3rem",
+            "&:hover": {
+              bgcolor: palette.addFriendBtn.main,
+            },
+          }}
+        >
+          {isFriend ? <PersonRemoveIcon /> : <PersonAddIcon />}
+        </IconButton>
+      )}
     </FlexBetween>
   );
 }
