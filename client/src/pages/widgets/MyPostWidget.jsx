@@ -23,7 +23,7 @@ import { useState } from "react";
 import Dropzone from "react-dropzone";
 import { useDispatch, useSelector } from "react-redux";
 
-import { setPosts } from "state";
+import { setAddNewPost } from "state";
 
 function MyPostWidget() {
   const [postDescription, setPostDescription] = useState("");
@@ -53,7 +53,7 @@ function MyPostWidget() {
 
     if (response.ok) {
       const data = await response.json();
-      dispatch(setPosts(data));
+      dispatch(setAddNewPost(data));
 
       // Clear the form
       setPostDescription("");
@@ -172,6 +172,10 @@ function MyPostWidget() {
             bgcolor: palette.primary.main,
             color: palette.primary.contrastText,
             borderRadius: "3rem",
+            "&:hover": {
+              backgroundColor: palette.primary.dark,
+              color: palette.primary.contrastText,
+            },
           }}
           onClick={handlePost}
         >
