@@ -66,7 +66,7 @@ export const likePost = async (req, res) => {
     }
     await post.save();
 
-    res.status(200).send();
+    res.status(200).json(post.likes);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
