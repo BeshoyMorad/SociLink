@@ -35,8 +35,14 @@ const authSlice = createSlice({
     setAddNewPost: (state, action) => {
       state.posts.push(action.payload);
     },
-    setPost: (state, action) => {
-      // Not yet implemented
+    setLikePost: (state, action) => {
+      state.posts = state.posts.map((post) => {
+        if (post._id === action.payload.postId) {
+          post.likes = action.payload.likes;
+          return post;
+        }
+        return post;
+      });
     },
   },
 });
@@ -48,7 +54,7 @@ export const {
   setFriends,
   setPosts,
   setAddNewPost,
-  setPost,
+  setLikePost,
 } = authSlice.actions;
 
 export default authSlice.reducer;
