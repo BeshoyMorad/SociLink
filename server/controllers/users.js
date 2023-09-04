@@ -51,9 +51,13 @@ export const addRemoveFriend = async (req, res) => {
     if (!user || !friend)
       return res.status(404).json({ error: "User not found" });
 
+    if (id === friendId)
+      return res.status(400).json({ error: "Cannot add yourself as a friend" });
+
     if (add) {
-      user.friends.push(friend._id);
-      friend.friends.push(user._id);
+      if (!user.friends.includes(friend._id)) user.friends.push(friend._id);
+
+      if (!friend.friends.includes(user._id)) friend.friends.push(user._id);
     } else {
       // Remove the friend from user.friends
       user.friends = user.friends.filter((_id) => _id.toString() !== friendId);
@@ -64,7 +68,7 @@ export const addRemoveFriend = async (req, res) => {
     await user.save();
     await friend.save();
 
-    res.status(200).send();
+    res.status(200).json(user.friends);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
