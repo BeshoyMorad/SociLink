@@ -21,6 +21,10 @@ const getDesignTokens = (mode) => ({
           inputBaseBG: {
             main: grey[300],
           },
+          addFriendBtn: {
+            backGround: "#2196f3",
+            main: "#1769aa",
+          },
         }
       : {
           navBar: {
@@ -38,6 +42,10 @@ const getDesignTokens = (mode) => ({
           },
           inputBaseBG: {
             main: grey[500],
+          },
+          addFriendBtn: {
+            backGround: "#1769aa",
+            main: "#2196f3",
           },
         }),
   },
