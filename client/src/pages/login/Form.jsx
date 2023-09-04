@@ -97,7 +97,7 @@ function Form(props) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
     });
-    console.log(savedUserResponse);
+
     if (savedUserResponse.ok) {
       const savedUser = await savedUserResponse.json();
       onSubmitProps.resetForm();
@@ -128,7 +128,7 @@ function Form(props) {
         setFieldValue,
         resetForm,
       }) => (
-        <Box component="form" onSubmit={handleSubmit}>
+        <Box component="form" autoComplete="off" onSubmit={handleSubmit}>
           <Grid
             container
             spacing={3}
