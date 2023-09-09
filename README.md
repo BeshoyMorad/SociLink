@@ -57,23 +57,38 @@ SociLink is a dynamic and innovative social media platform that seamlessly conne
 - Signup
 - Login
 
+![Signup](https://github.com/BeshoyMorad/SociLink/assets/82404564/f61767b4-6207-4999-b9b1-7046349c2c9c)
+![Signup2](https://github.com/BeshoyMorad/SociLink/assets/82404564/a52c5fa7-655c-46d6-a48c-12158be21cca)
+![login](https://github.com/BeshoyMorad/SociLink/assets/82404564/49ca94d4-7fa5-4015-924d-526134f4b8dc)
+
+
 ---
 
 ### _🙍‍♂️ User Profile_
 
 - Profile overview (posts, user information)
 
+![profile](https://github.com/BeshoyMorad/SociLink/assets/82404564/23d7289f-f43a-48e4-8a38-bd87b3b575c4)
+
 ---
 
 ### _📰 Post_
 
-- Create rich text post
+- Create a rich text post
 - Create image post
 - React to a post
+
+![home page](https://github.com/BeshoyMorad/SociLink/assets/82404564/fbac1bda-0483-4f9a-ad03-6a0ca0b6c6cc)
+![react](https://github.com/BeshoyMorad/SociLink/assets/82404564/20a89511-4d8c-4383-8668-519b8087f4b8)
+![home mobile](https://github.com/BeshoyMorad/SociLink/assets/82404564/55338a4b-040c-496c-8c89-5b09c41feb20)
+![navbar mobile](https://github.com/BeshoyMorad/SociLink/assets/82404564/3b13e9a1-f80b-43c4-8213-7b1792c23d7d)
 
 ---
 
 ### _☀️ Dark mode_
+
+![dark1](https://github.com/BeshoyMorad/SociLink/assets/82404564/a4d8491b-96f0-4647-b242-c69c64a5ff99)
+![dark2](https://github.com/BeshoyMorad/SociLink/assets/82404564/19ddbdb3-c28c-4c5b-9cf7-6f393c298cbd)
 
 ---
 
