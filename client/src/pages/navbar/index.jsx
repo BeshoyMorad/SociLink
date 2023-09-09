@@ -124,7 +124,10 @@ function Navbar() {
               <List>
                 <ListItem disablePadding>
                   <ListItemButton
-                    onClick={() => navigate(`/profile/${user._id}`)}
+                    onClick={() => {
+                      navigate(`/profile/${user._id}`);
+                      navigate(0);
+                    }}
                   >
                     <ListItemText primary={fullName} />
                   </ListItemButton>
