@@ -188,7 +188,11 @@ function Navbar() {
               </IconButton>
 
               <Box>
-                <Avatar alt={fullName} onClick={handleAvatarClick} />
+                <Avatar
+                  alt={fullName}
+                  onClick={handleAvatarClick}
+                  src={`http://localhost:3001/assets/${user.picturePath}`}
+                />
                 <Popover
                   open={Boolean(anchorEl)}
                   anchorEl={anchorEl}
