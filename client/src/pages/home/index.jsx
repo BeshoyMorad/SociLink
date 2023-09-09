@@ -1,12 +1,14 @@
 import { Box, Grid, useMediaQuery } from "@mui/material";
 import Navbar from "pages/navbar";
+import AdvertWidget from "pages/widgets/AdvertWidget";
+import FriendListWidget from "pages/widgets/FriendListWidget";
 import MyPostWidget from "pages/widgets/MyPostWidget";
 import PostsWidget from "pages/widgets/PostsWidget";
 import UserWidget from "pages/widgets/UserWidget";
 import { useSelector } from "react-redux";
 
 function HomePage() {
-  const user = useSelector((state) => state.user);
+  const userId = useSelector((state) => state.user._id);
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
 
   return (
@@ -21,17 +23,19 @@ function HomePage() {
         }}
       >
         <Grid item xs={isNonMobileScreens ? 3 : 12}>
-          <UserWidget userId={user._id} />
+          <UserWidget userId={userId} />
         </Grid>
 
         <Grid item xs={isNonMobileScreens ? 6 : 12}>
           <MyPostWidget />
-          <PostsWidget userId={user._id} />
+          <PostsWidget userId={userId} />
         </Grid>
 
         {isNonMobileScreens && (
           <Grid item xs={3}>
-            {/* Friends list */}
+            <AdvertWidget />
+            <Box mt="3rem" />
+            <FriendListWidget userId={userId} />
           </Grid>
         )}
       </Grid>
