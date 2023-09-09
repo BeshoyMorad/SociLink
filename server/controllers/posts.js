@@ -16,7 +16,23 @@ export const createPost = async (req, res) => {
     });
     const post = await newPost.save();
 
-    res.status(201).json(post);
+    const formatedPost = {
+      _id: post._id,
+      user: {
+        _id: post.user._id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        location: user.location,
+        picturePath: user.picturePath,
+      },
+      description: post.description,
+      picturePath: post.picturePath,
+      likes: post.likes,
+      comments: post.comments,
+      createdAt: post.createdAt,
+      updatedAt: post.updatedAt,
+    };
+    res.status(201).json(formatedPost);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
