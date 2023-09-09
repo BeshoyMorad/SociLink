@@ -14,7 +14,7 @@ function Friend({ friendId, name, friendLocation, friendPicturePath }) {
   const navigate = useNavigate();
   const { palette } = useTheme();
 
-  const isFriend = friends.includes(friendId);
+  const isFriend = friends.find((friend) => friend._id === friendId);
 
   const addRemoveFriend = async () => {
     const add = !isFriend;
