@@ -68,7 +68,20 @@ export const addRemoveFriend = async (req, res) => {
     await user.save();
     await friend.save();
 
-    res.status(200).json(user.friends);
+    const userFriends = await User.findById(id).populate("friends");
+
+    const formatedFriends = userFriends.friends.map((friend) => {
+      return {
+        _id: friend._id,
+        firstName: friend.firstName,
+        lastName: friend.lastName,
+        occupation: friend.occupation,
+        location: friend.location,
+        picturePath: friend.picturePath,
+      };
+    });
+
+    res.status(200).json(formatedFriends);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
