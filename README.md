@@ -57,10 +57,8 @@ SociLink is a dynamic and innovative social media platform that seamlessly conne
 - Signup
 - Login
 
-![Signup](https://github.com/BeshoyMorad/SociLink/assets/82404564/f61767b4-6207-4999-b9b1-7046349c2c9c)
-![Signup2](https://github.com/BeshoyMorad/SociLink/assets/82404564/a52c5fa7-655c-46d6-a48c-12158be21cca)
-![login](https://github.com/BeshoyMorad/SociLink/assets/82404564/49ca94d4-7fa5-4015-924d-526134f4b8dc)
-
+![signup](https://github.com/BeshoyMorad/SociLink/assets/82404564/246fd546-9819-4de2-bed6-3eb34f3ddeff)
+![login](https://github.com/BeshoyMorad/SociLink/assets/82404564/713a061c-6705-4edb-a5e4-b1183dc7f6df)
 
 ---
 
@@ -68,7 +66,7 @@ SociLink is a dynamic and innovative social media platform that seamlessly conne
 
 - Profile overview (posts, user information)
 
-![profile](https://github.com/BeshoyMorad/SociLink/assets/82404564/23d7289f-f43a-48e4-8a38-bd87b3b575c4)
+![profile](https://github.com/BeshoyMorad/SociLink/assets/82404564/b5c5a93e-06c3-4286-88e3-150a8bd09dce)
 
 ---
 
@@ -78,17 +76,17 @@ SociLink is a dynamic and innovative social media platform that seamlessly conne
 - Create image post
 - React to a post
 
-![home page](https://github.com/BeshoyMorad/SociLink/assets/82404564/fbac1bda-0483-4f9a-ad03-6a0ca0b6c6cc)
-![react](https://github.com/BeshoyMorad/SociLink/assets/82404564/20a89511-4d8c-4383-8668-519b8087f4b8)
-![home mobile](https://github.com/BeshoyMorad/SociLink/assets/82404564/55338a4b-040c-496c-8c89-5b09c41feb20)
-![navbar mobile](https://github.com/BeshoyMorad/SociLink/assets/82404564/3b13e9a1-f80b-43c4-8213-7b1792c23d7d)
+![homepage](https://github.com/BeshoyMorad/SociLink/assets/82404564/b30839e7-82f3-40c7-998e-d5a1d58032c9)
+![react](https://github.com/BeshoyMorad/SociLink/assets/82404564/a916f682-2c7e-40fb-8cf9-be1df0266cff)
+![home mobile](https://github.com/BeshoyMorad/SociLink/assets/82404564/acdd6f3e-579e-4947-a07e-24c486b5677f)
+![navbar mobile](https://github.com/BeshoyMorad/SociLink/assets/82404564/6d2329db-5189-45a3-aaa2-e791d4b23199)
 
 ---
 
 ### _☀️ Dark mode_
 
-![dark1](https://github.com/BeshoyMorad/SociLink/assets/82404564/a4d8491b-96f0-4647-b242-c69c64a5ff99)
-![dark2](https://github.com/BeshoyMorad/SociLink/assets/82404564/19ddbdb3-c28c-4c5b-9cf7-6f393c298cbd)
+![dark](https://github.com/BeshoyMorad/SociLink/assets/82404564/9ac9af4a-f5ab-4ab8-be1f-f974f1354cfb)
+![dark2](https://github.com/BeshoyMorad/SociLink/assets/82404564/df75ead1-eb4e-442a-957b-bf180632cf1d)
 
 ---
 
